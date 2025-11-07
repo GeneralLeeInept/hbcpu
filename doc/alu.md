@@ -26,15 +26,28 @@
 11 - Logic
 
 ## Operations
-000 - SLL / SRL / ADD / AND
-001 - SLL / SRA / ADDC / OR
-010 - SLL / SRL / SUB / XOR
-011 - SLL / SRA / SUBB / NOT
+00 - SLL / SRL / ADD / AND
+01 - SLL / SRA / ADDC / OR
+10 - SLL / SRL / SUB / XOR
+11 - SLL / SRA / SUBB / NOT
 
 ## Adder
 Operation   CIn   Sub
-000 ADD       0     0
-001 ADDC      1     0
-010 SUB       0     1
-011 SUBB      1     1
+00 ADD       0     0
+01 SUB       1     1
+10 ADDC      C     0
+11 SUBB      C     1
+
+## ALU Ops
+0000 (0) - SLL
+0100 (4) - SRL
+0101 (5) - SRA
+1000 (8) - ADD
+1001 (9) - SUB
+1010 (A) - ADDC
+1011 (B) - SUBB
+1100 (C) - AND
+1101 (D) - OR
+1110 (E) - XOR
+1111 (F) - NOT
 
